@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" id="metaThemeColor" content="#ffffff">
+    <link rel="icon" href="data:,">
+    <title>经典英文演讲句集 | Motivational Quotes Collection</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap">
+    <style>
+        /* ===== 基础重置（替代原 Tailwind CDN，仅保留页面实际用到的默认值） ===== */
+        *, *::before, *::after { box-sizing: border-box; }
+        html { -webkit-text-size-adjust: 100%; }
+        body { margin: 0; }
+        p { margin: 0; }
+        h1, h2, h3, h4, h5, h6 { margin: 0; }
+        ul, ol { list-style: none; margin: 0; padding: 0; }
+        a { color: inherit; text-decoration: none; }
+        button { font: inherit; color: inherit; }
+        .text-center { text-align: center; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        :root {
+            --color-primary-50: #e3f2e3;
+            --color-primary-100: #d0e7d0;
+            --color-primary-200: #bbd9bb;
+            --color-primary-300: #9bc69a;
+            --color-primary-400: #65b064;
+            --color-primary-500: #479b46;
+            --color-primary-600: #337c32;
+            --color-primary-700: #286e27;
+            --color-primary-800: #1b561b;
+            --color-primary-900: #113711;
+            
+            --color-secondary-50: #f6f0f6;
+            --color-secondary-100: #e9deea;
+            --color-secondary-200: #d9cad9;
+            --color-secondary-300: #c4acc4;
+            --color-secondary-400: #a97aaa;
+            --color-secondary-500: #985899;
+            --color-secondary-600: #7c417d;
+            --color-secondary-700: #703471;
+            --color-secondary-800: #5b255b;
+            --color-secondary-900: #3e1a3e;
+            
+            --color-neutral-50: #ffffff;
+            --color-neutral-100: #ffffff;
+            --color-neutral-200: #ffffff;
+            --color-neutral-300: #ffffff;
+            --color-neutral-400: #f2f3f2;
+            --color-neutral-500: #d7ddd5;
+            --color-neutral-600: #bbc9b6;
+            --color-neutral-700: #abc2a3;
+            --color-neutral-800: #95b989;
+            --color-neutral-900: #7eaa6f;
+
+            --font-family-heading: 'Merriweather', Georgia, serif;
+            --font-family-body: 'Inter', system-ui, sans-serif;
+            --font-size-base: 16px;
+            --line-height: 1.6;
+            --heading-scale: 1.17;
+            --border-radius: 12px;
+        }
+
+        .theme-light {
+            --bg-primary: var(--color-neutral-50);
+            --bg-secondary: var(--color-neutral-100);
+            --bg-tertiary: var(--color-neutral-200);
+            --bg-accent: var(--color-primary-100);
+            --text-primary: var(--color-primary-900);
+            --text-secondary: var(--color-primary-700);
+            --text-tertiary: var(--color-primary-500);
+            --text-accent: var(--color-secondary-700);
+            --border-color: var(--color-neutral-400);
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --quote-bg: var(--color-primary-50);
+            --quote-border: var(--color-primary-200);
+            --card-bg: var(--color-neutral-50);
+            --header-bg: rgba(255, 255, 255, 0.8);
+            --scrollbar-thumb: var(--color-primary-300);
+            --scrollbar-track: var(--color-neutral-100);
+        }
+
+        .theme-dark {
+            --bg-primary: #121212;
+            --bg-secondary: #1e1e1e;
+            --bg-tertiary: #2a2a2a;
+            --bg-accent: var(--color-primary-900);
+            --text-primary: var(--color-neutral-100);
+            --text-secondary: var(--color-neutral-300);
+            --text-tertiary: var(--color-neutral-500);
+            --text-accent: var(--color-secondary-300);
+            --border-color: #333333;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --quote-bg: rgba(59, 130, 59, 0.15);
+            --quote-border: var(--color-primary-800);
+            --card-bg: #1a1a1a;
+            --header-bg: rgba(18, 18, 18, 0.8);
+            --scrollbar-thumb: var(--color-primary-700);
+            --scrollbar-track: #2a2a2a;
+        }
+
+        /* Base Styles */
+        html {
+            font-size: var(--font-size-base);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family-body);
+            line-height: var(--line-height);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0;
+            padding: 0;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-family-heading);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            transition: color 0.3s ease;
+        }
+
+        h1 { font-size: calc(var(--font-size-base) * var(--heading-scale) * var(--heading-scale) * var(--heading-scale) * var(--heading-scale)); }
+        h2 { font-size: calc(var(--font-size-base) * var(--heading-scale) * var(--heading-scale) * var(--heading-scale)); }
+        h3 { font-size: calc(var(--font-size-base) * var(--heading-scale) * var(--heading-scale)); }
+        h4 { font-size: calc(var(--font-size-base) * var(--heading-scale)); }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Components */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px var(--shadow-color);
+        }
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: var(--header-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 100;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.3s ease;
+        }
+
+        /* Navigation */
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-title {
+            font-family: var(--font-family-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: var(--border-radius);
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+            background-color: var(--bg-accent);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+            padding: 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--bg-accent);
+            color: var(--text-primary);
+        }
+
+        /* Quote Sections */
+        .quote-section {
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        .quote-section:nth-child(1) { animation-delay: 0.1s; }
+        .quote-section:nth-child(2) { animation-delay: 0.2s; }
+        .quote-section:nth-child(3) { animation-delay: 0.3s; }
+        .quote-section:nth-child(4) { animation-delay: 0.4s; }
+        .quote-section:nth-child(5) { animation-delay: 0.5s; }
+        .quote-section:nth-child(6) { animation-delay: 0.6s; }
+        .quote-section:nth-child(7) { animation-delay: 0.7s; }
+        .quote-section:nth-child(8) { animation-delay: 0.8s; }
+        .quote-section:nth-child(9) { animation-delay: 0.9s; }
+        .quote-section:nth-child(10) { animation-delay: 1.0s; }
+        .quote-section:nth-child(n+11) { animation-delay: 1.1s; }
+
+        .quote-title {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quote-title-icon {
+            color: var(--text-accent);
+            font-size: 1.2rem;
+        }
+
+        .quote-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .quote-item {
+            background-color: var(--quote-bg);
+            border-left: 4px solid var(--quote-border);
+            padding: 1rem 1.5rem;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .quote-item:hover {
+            transform: translateX(4px);
+        }
+
+        .quote-english {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: color 0.2s ease;
+        }
+
+        .quote-english:hover {
+            color: var(--color-primary-500);
+        }
+
+        /* 折叠 / 展开：中文翻译 */
+        .quote-item {
+            cursor: pointer;
+        }
+
+        .quote-item .quote-english {
+            display: block;
+            position: relative;
+            padding-right: 2.25rem;
+        }
+
+        .quote-chinese {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-height: 400px;
+            opacity: 1;
+            overflow: hidden;
+            transition: max-height 0.28s ease, opacity 0.2s ease, margin 0.28s ease;
+        }
+
+        .quote-item.is-collapsed .quote-chinese {
+            max-height: 0;
+            opacity: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .zh-hint {
+            display: none;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
+        }
+
+        .quote-item.is-collapsed .zh-hint {
+            display: inline-block;
+        }
+
+        .quote-english.is-playing {
+            background-color: var(--bg-accent);
+            border-radius: 8px;
+        }
+
+        .speak-btn {
+            position: absolute;
+            right: 0;
+            top: 0.05rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-tertiary);
+            padding: 0.2rem 0.4rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            line-height: 1;
+            transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .speak-btn:hover {
+            color: var(--color-primary-600);
+            background-color: var(--bg-accent);
+        }
+
+        .speak-btn.playing {
+            color: var(--color-primary-500);
+            transform: scale(1.15);
+        }
+
+        .number-indicator {
+            font-weight: 600;
+            color: var(--text-accent);
+            margin-right: 0.5rem;
+        }
+
+        /* ===== 顶置悬浮目录 ===== */
+        .floating-toc-btn {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 120;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.7rem 1.05rem;
+            border: none;
+            border-radius: 999px;
+            background-color: var(--color-primary-600);
+            color: #ffffff;
+            font-family: var(--font-family-body);
+            font-size: 0.92rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            cursor: pointer;
+            box-shadow: 0 6px 16px var(--shadow-color);
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .floating-toc-btn:hover {
+            transform: translateY(-2px);
+            background-color: var(--color-primary-700);
+            box-shadow: 0 8px 20px var(--shadow-color);
+        }
+
+        .toc-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.35);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+            z-index: 130;
+        }
+
+        .toc-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .floating-toc-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            height: 100dvh;
+            width: 320px;
+            max-width: 86vw;
+            background-color: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            box-shadow: 4px 0 24px var(--shadow-color);
+            transform: translateX(-102%);
+            transition: transform 0.3s ease;
+            z-index: 140;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .floating-toc-panel.open {
+            transform: translateX(0);
+        }
+
+        .ftoc-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.15rem 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ftoc-heading {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-family-heading);
+            font-weight: 700;
+            font-size: 1.02rem;
+            color: var(--text-primary);
+        }
+
+        .ftoc-close {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            padding: 0.35rem 0.5rem;
+            border-radius: 50%;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .ftoc-close:hover {
+            background-color: var(--bg-accent);
+            color: var(--text-primary);
+        }
+
+        .ftoc-list {
+            list-style: none;
+            margin: 0;
+            padding: 0.5rem 0 calc(2.5rem + env(safe-area-inset-bottom, 0px));
+            overflow-y: auto;
+            flex: 1;
+            overscroll-behavior: contain;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .ftoc-link {
+            display: flex;
+            align-items: baseline;
+            gap: 0.55rem;
+            padding: 0.52rem 1.15rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-left: 3px solid transparent;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .ftoc-link:hover {
+            background-color: var(--bg-accent);
+            color: var(--text-primary);
+        }
+
+        .ftoc-link.active {
+            color: var(--text-accent);
+            border-left-color: var(--color-primary-500);
+            background-color: var(--bg-accent);
+            font-weight: 600;
+        }
+
+        .ftoc-index {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            min-width: 1.4rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .quote-section {
+            scroll-margin-top: 84px;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background-color: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .toc-title {
+            font-family: var(--font-family-heading);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 0.75rem 1.5rem;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-item {
+            position: relative;
+        }
+
+        .toc-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: inline-block;
+            padding: 0.35rem 0;
+            transition: color 0.2s ease, transform 0.2s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+
+        .toc-link:hover {
+            color: var(--text-accent);
+            transform: translateX(4px);
+        }
+
+        .toc-link::before {
+            content: "•";
+            margin-right: 0.5rem;
+            color: var(--text-accent);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-tertiary);
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbar-track);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-primary-500);
+        }
+
+        /* Back to Top Button（返回顶部，与目录按钮明确区分：向上箭头 + 文字） */
+        .back-to-toc {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: var(--color-primary-500);
+            color: white;
+            min-width: 50px;
+            height: 50px;
+            padding: 0 1rem;
+            gap: 0.35rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-family-body);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            cursor: pointer;
+            z-index: 99;
+            transition: all 0.3s ease;
+            opacity: 0.85;
+            border: none;
+        }
+
+        .back-to-toc:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px var(--shadow-color);
+            background-color: var(--color-primary-600);
+        }
+
+        .back-to-toc:active {
+            transform: scale(0.94);
+        }
+
+        /* ===== 触屏设备：关闭悬停位移，改为按压反馈 ===== */
+        @media (hover: none) {
+            .card:hover,
+            .quote-item:hover,
+            .toc-link:hover {
+                transform: none;
+            }
+
+            .quote-item:active {
+                background-color: var(--bg-accent);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 1.25rem;
+            }
+
+            .quote-item {
+                padding: 0.95rem 1rem 0.95rem 1.1rem;
+            }
+
+            .quote-title {
+                font-size: 1.18rem;
+                line-height: 1.45;
+                gap: 0.45rem;
+            }
+
+            .quote-title-icon {
+                font-size: 1rem;
+                flex-shrink: 0;
+            }
+
+            .toc-link {
+                white-space: normal;
+                line-height: 1.5;
+                padding: 0.5rem 0;
+            }
+
+            .ftoc-link {
+                min-height: 44px;
+                align-items: center;
+                font-size: 0.95rem;
+            }
+
+            .quote-section {
+                scroll-margin-top: 68px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 15px;
+            }
+
+            .header {
+                padding: 0.6rem 0;
+            }
+
+            .nav-title {
+                font-size: 1.15rem;
+            }
+
+            .container {
+                padding: 0 0.85rem;
+            }
+
+            .card {
+                padding: 1rem;
+                margin-bottom: 1.25rem;
+                border-radius: 10px;
+            }
+
+            .quote-section {
+                margin-bottom: 1.75rem;
+                animation-delay: 0s !important;
+            }
+
+            .card h1 {
+                font-size: 1.35rem;
+                margin-top: 0.25rem;
+            }
+
+            .card .mb-8 {
+                font-size: 0.85rem;
+                margin-bottom: 1rem;
+                line-height: 1.55;
+            }
+
+            .toc {
+                padding: 1rem 1.05rem;
+            }
+
+            .toc-title {
+                font-size: 1.05rem;
+                margin-bottom: 0.6rem;
+            }
+
+            .toc-list {
+                gap: 0;
+            }
+
+            .quote-title {
+                font-size: 1.08rem;
+                padding-bottom: 0.45rem;
+                margin-bottom: 1rem;
+            }
+
+            .quote-english {
+                font-size: 1.05rem;
+                line-height: 1.65;
+                padding-right: 2.6rem;
+                overflow-wrap: break-word;
+            }
+
+            .quote-chinese {
+                font-size: 0.95rem;
+            }
+
+            .zh-hint {
+                font-size: 0.8rem;
+            }
+
+            .quote-item {
+                padding: 0.85rem 0.95rem 0.85rem 1rem;
+            }
+
+            .speak-btn {
+                top: -0.05rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.05rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .floating-toc-btn {
+                left: 14px;
+                bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+                width: 3.25rem;
+                height: 3.25rem;
+                padding: 0;
+                border-radius: 50%;
+                font-size: 1.05rem;
+                justify-content: center;
+            }
+
+            .floating-toc-btn span {
+                display: none;
+            }
+
+            .back-to-toc {
+                right: 14px;
+                bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+                min-width: 3.25rem;
+                height: 3.25rem;
+                padding: 0;
+                font-size: 1.05rem;
+            }
+
+            .back-to-toc .back-to-toc-label {
+                display: none;
+            }
+        }
+
+        /* Mobile Navigation：小屏隐藏汉堡菜单，夜间模式按钮直接常驻右上角 */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 640px) {
+            .mobile-nav-toggle {
+                display: none;
+            }
+
+            .nav-menu {
+                position: static;
+                width: auto;
+                flex-direction: row;
+                padding: 0;
+                gap: 0;
+                background-color: transparent;
+                box-shadow: none;
+                transform: none;
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .theme-toggle {
+                width: 2.75rem;
+                height: 2.75rem;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body class="theme-light">
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="nav-title">经典英文演讲句集</a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="quote-section">
+            <div class="card">
+                <h1 class="text-center mb-6">23篇经典英文演讲句集</h1>
+                <p class="text-center mb-8">点击英文句子：播放发音并展开中文翻译；再次点击即可收起中文</p>
+                
+                <div class="toc">
+                    <h2 class="toc-title">目录</h2>
+                    <ul class="toc-list">
+                        <li class="toc-item">
+                            <a href="#reach-the-goals" class="toc-link">必须达成目标</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#mean-something" class="toc-link">成为举足轻重的人</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#protect-your-dream" class="toc-link">捍卫你的梦想</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#good-artists" class="toc-link">优秀者模仿，伟大者剽窃</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#failed-over" class="toc-link">一次一次又一次的失败</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#pushing-through" class="toc-link">穿越痛苦</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#nasty-place" class="toc-link">残酷世界</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#hit" class="toc-link">承受打击</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#will-you-fight" class="toc-link">你会战斗吗</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#never-surrender" class="toc-link">绝不投降</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#without-victory" class="toc-link">没有胜利，无法生存</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#save-himself" class="toc-link">强者自救，圣者渡人</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#lay-this-brick" class="toc-link">砌好这块砖</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#do-what-you-need" class="toc-link">做你需要做的事情</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#sickening-work" class="toc-link">病态的职业精神</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#think-different" class="toc-link">非同凡响</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#always-knew" class="toc-link">我一直知道我会富有</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#compound-interest" class="toc-link">复利法则</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#method-of-learning" class="toc-link">学习的方法</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#change-mindset" class="toc-link">改变思维模式，改变大脑</a>
+                        </li>
+                        <li class="toc-item">
+                            <a href="#grit-is-key" class="toc-link">毅力是成功的关键</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Reach the goals -->
+        <section id="reach-the-goals" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-trophy quote-title-icon"></i>
+                    必须达成目标 | Reach the goals
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p01_01.mp3">My life has been a trade-off.</p>
+                        <p class="quote-chinese">我的人生是一场交易。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p01_02.mp3">If I wanted to reach the goals I set for myself, I had to get at it and stay at it everyday.</p>
+                        <p class="quote-chinese">如果我想达到我给自己设定的目标，就必须每天为之奋斗，坚持不懈。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p01_03.mp3">I had to think about it all the time.</p>
+                        <p class="quote-chinese">必须时刻把它放在心上。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p01_04.mp3">I had to get up everyday with my mind set on improving something.</p>
+                        <p class="quote-chinese">我每天一起床，脑子里就想着要去改进些什么。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p01_05.mp3">I was driven by a desire to always be on the top of the heap.</p>
+                        <p class="quote-chinese">我一直被一种想要追求卓越的渴望驱策着。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Mean something -->
+        <section id="mean-something" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-star quote-title-icon"></i>
+                    成为举足轻重的人 | Mean something
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p02_01.mp3">I want to do good.</p>
+                        <p class="quote-chinese">我想做好的事情。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p02_02.mp3">I want the world to be better because I was here.</p>
+                        <p class="quote-chinese">我要这个世界因为我而变得更好。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p02_03.mp3">I want my life, my work, and my family to mean something.</p>
+                        <p class="quote-chinese">我想让我的生活、工作和家庭都因为我而变得更有意义。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p02_04.mp3">If you're not making someone else's life better then you're wasting your time.</p>
+                        <p class="quote-chinese">如果你没有给他人的生活带来改变，那你就是在浪费自己的时间！</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p02_05.mp3">Your life will become better by making other lives better.</p>
+                        <p class="quote-chinese">改善他人的生活，你的生活也会变得更好！</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p02_06.mp3">I want to represent an idea.</p>
+                        <p class="quote-chinese">我想要再现一种理念。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p02_07.mp3">I want to represent possibilities.</p>
+                        <p class="quote-chinese">我想再现人生的各种可能性。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p02_08.mp3">I want to represent the idea that you really can make what you want.</p>
+                        <p class="quote-chinese">我想再现的理念是，你真的可以做成你想要的东西！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Protect your dream -->
+        <section id="protect-your-dream" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-shield-alt quote-title-icon"></i>
+                    捍卫你的梦想 | Protect your dream
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p03_01.mp3">Don't ever let someone tell you that you can't do something.</p>
+                        <p class="quote-chinese">不要让任何人告诉你，你做不成事。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p03_02.mp3">Not even me.</p>
+                        <p class="quote-chinese">即便是我也不行。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p03_03.mp3">You got a dream, you gotta protect it.</p>
+                        <p class="quote-chinese">如果你有梦想，你要保护它。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p03_04.mp3">When people can't do something themselves, they're gonna tell you that you can't do it.</p>
+                        <p class="quote-chinese">当人们自己做不到的时候，他们会说你也成不了大器。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p03_05.mp3">You want something, go get it.</p>
+                        <p class="quote-chinese">如果你要什么，去得到它。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p03_06.mp3">Period.</p>
+                        <p class="quote-chinese">绝不迟疑。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Good artists copy, great artists steal -->
+        <section id="good-artists" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-paint-brush quote-title-icon"></i>
+                    优秀者模仿，伟大者剽窃 | Good artists copy, great artists steal
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p04_01.mp3">How do you know what's the right direction?</p>
+                        <p class="quote-chinese">你怎么知道哪个方向是正确的？</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p04_02.mp3">Ultimately it comes down to taste.</p>
+                        <p class="quote-chinese">其实归根到底是品位的问题。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p04_03.mp3">It comes down to taste.</p>
+                        <p class="quote-chinese">那终究是品味问题。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p04_04.mp3">It's a matter of trying to expose yourself to the best things that humans have done.</p>
+                        <p class="quote-chinese">你要尽量让自己接触到这个世界上最优秀的事物。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p04_05.mp3">And then try to bring those things into what you are doing.</p>
+                        <p class="quote-chinese">并把它运用到自己的工作中去。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p04_06.mp3">Picasso had a saying, "Good artists copy, great artists steal."</p>
+                        <p class="quote-chinese">毕加索说过，"优秀者模仿, 伟大者剽窃。"</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p04_07.mp3">We have always been shameless about stealing great ideas.</p>
+                        <p class="quote-chinese">当我们剽窃别人的卓越的创意的时候，从不觉得羞愧。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Failed over and over and over again -->
+        <section id="failed-over" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-chart-line quote-title-icon"></i>
+                    一次一次又一次的失败 | Failed over and over and over again
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p05_01.mp3">I've missed more than 9000 shots in my career.</p>
+                        <p class="quote-chinese">我的职业生涯投篮失误超过9000次。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p05_02.mp3">I've lost almost 300 games.</p>
+                        <p class="quote-chinese">我输了大约300场比赛。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p05_03.mp3">26 times I've been trusted to take the game winning shot and missed.</p>
+                        <p class="quote-chinese">有26次我被委以重任投制胜一球，但失手了。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p05_04.mp3">I've failed over and over and over again in my life.</p>
+                        <p class="quote-chinese">我这一生，一次一次又一次失败。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p05_05.mp3">And that is why I succeed.</p>
+                        <p class="quote-chinese">那就是我为什么能够成功的原因。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Pushing through the pain -->
+        <section id="pushing-through" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-fire quote-title-icon"></i>
+                    穿越痛苦 | Pushing through the pain
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p06_01.mp3">As a magician, I try to create images that make people stop and think.</p>
+                        <p class="quote-chinese">作为一个魔术师，我总是尝试去创造一个现象，可以让人们驻足思考。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p06_02.mp3">I also try to challenge myself to do things that doctors say are not possible.</p>
+                        <p class="quote-chinese">我也试着挑战自己，做一些医生看来不可能的事情。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p06_03.mp3">As a magician I try to show things to people that seem impossible.</p>
+                        <p class="quote-chinese">作为一个魔术师，我试着展示一些东西，那些看似不可能的事。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p06_04.mp3">And I think magic, whether I'm holding my breath or shuffling a deck of cards, is pretty simple.</p>
+                        <p class="quote-chinese">我认为魔术，不管是水下屏气，还是捣鼓一副纸牌，道理都很简单。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p06_05.mp3">It's practice, it's training.</p>
+                        <p class="quote-chinese">就是练习，训练，以及。。。。（流泪）</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p06_06.mp3">And It's practice, it's training and experimenting, while pushing through the pain to be the best that I can be.</p>
+                        <p class="quote-chinese">就是练习，训练，以及不断尝试。去强忍过那些极痛苦的时刻，做自己能做的一切。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p06_07.mp3">And that's what magic is to me, so, thank you. (Applause)</p>
+                        <p class="quote-chinese">这就是魔术对于我的意义。谢谢你们。（掌声）</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. nasty place -->
+        <section id="nasty-place" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-mountain quote-title-icon"></i>
+                    残酷世界 | Nasty place
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p07_01.mp3">Then the time come for you to be your own man and take on the world and you did.</p>
+                        <p class="quote-chinese">然后就是你自己奋斗的人生了，自己去承担自己的事情，你也确实做得很好。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p07_02.mp3">But somewhere along the line, you changed.</p>
+                        <p class="quote-chinese">但是有些时候，你变了。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p07_03.mp3">You stopped being you.</p>
+                        <p class="quote-chinese">你不再是你。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p07_04.mp3">You let people stick a finger in your face and tell you you're no good.</p>
+                        <p class="quote-chinese">你让别人指着你的脸说你不好。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p07_05.mp3">And when things got hard, you started looking for something to blame like a big shadow.</p>
+                        <p class="quote-chinese">而且遇到不顺心的事时，你开始怪罪于其他事情，就像巨大的阴影。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p07_06.mp3">Let me tell you something you already know.</p>
+                        <p class="quote-chinese">让我告诉你一些你已经知道的事。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p07_07.mp3">The world ain't all sunshine and rainbows.</p>
+                        <p class="quote-chinese">这世界不完全是阳光和彩虹。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p07_08.mp3">It's a very mean and nasty place, and I don't care how tough you are …</p>
+                        <p class="quote-chinese">这是一个非常刻薄艰险的世界，我不在乎你是多么坚强……</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p07_09.mp3">It will beat you to your knees and keep you there permanently if you let it.</p>
+                        <p class="quote-chinese">如果你屈服的话，它会永远把你打趴下的。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Hit -->
+        <section id="hit" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-fist-raised quote-title-icon"></i>
+                    承受打击 | Hit
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p08_01.mp3">You, me or nobody is gonna hit as hard as life.</p>
+                        <p class="quote-chinese">你，我，没人能够击打得比生活还重。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p08_02.mp3">But it ain't about how hard you hit.</p>
+                        <p class="quote-chinese">但是这并不在于你击打得多重。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p08_03.mp3">It's about how hard you can get hit and keep moving forward.</p>
+                        <p class="quote-chinese">而在于无论你被击打的有多重，但却能继续向前。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p08_04.mp3">How much you can take and keep moving forward.</p>
+                        <p class="quote-chinese">你能承受多少，并且继续前进。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p08_05.mp3">That's how winning is done!</p>
+                        <p class="quote-chinese">这才是真正的胜利。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p08_06.mp3">If you know what you're worth, go and get what you're worth.</p>
+                        <p class="quote-chinese">如果你知道你的价值，那么就前进，去实现你的价值。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p08_07.mp3">But you gotta be willing to take the hits, and not pointing fingers saying you ain't where you wanna be，because of him or her or anybody!</p>
+                        <p class="quote-chinese">但是你必须乐意承受打击，而不是没能实现目标时却指着别人说，是因为他或她的原因。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p08_08.mp3">Cowards do that, and that ain't you!</p>
+                        <p class="quote-chinese">懦夫才会那么做，你不是！</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p08_09.mp3">You're better than that!</p>
+                        <p class="quote-chinese">你远比那个出色！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Will you fight? -->
+        <section id="will-you-fight" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-sword quote-title-icon"></i>
+                    你会战斗吗 | Will you fight?
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_01.mp3">I am William Wallace.</p>
+                        <p class="quote-chinese">我是威廉华莱士。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_02.mp3">And I see a whole army of my countrymen here in defiance of tyranny.</p>
+                        <p class="quote-chinese">我看到我族组成的军队向暴政宣战。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_03.mp3">You've come to fight as free men,</p>
+                        <p class="quote-chinese">你们来到这里作为自由人参战。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_04.mp3">And free men you are.</p>
+                        <p class="quote-chinese">你们确实是自由人。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_05.mp3">What will you do with that freedom?</p>
+                        <p class="quote-chinese">你们如何对待自由？</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_06.mp3">Will you fight?</p>
+                        <p class="quote-chinese">你们愿意作战吗？</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_07.mp3">Fight, and you may die.</p>
+                        <p class="quote-chinese">作战，你们可能会死。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_08.mp3">Run, and you'll live … at least awhile.</p>
+                        <p class="quote-chinese">逃走，你会活着……至少一阵子。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_09.mp3">And dying in your beds many years from now.</p>
+                        <p class="quote-chinese">几年后在床上老死。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_10.mp3">Would you be willing to trade all the days from this day to that.</p>
+                        <p class="quote-chinese">你们是否愿意用所有的这些日子来换取。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_11.mp3">For one chance, just for one chance.</p>
+                        <p class="quote-chinese">为了一个机会，仅仅为了一个机会。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_12.mp3">To come back here and tell our enemies that they may take our lives,</p>
+                        <p class="quote-chinese">回到这里，告诉我们的敌人他们或许会夺走我们的生命，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_13.mp3">But they'll never take our freedom!</p>
+                        <p class="quote-chinese">但他们永远夺不走我们的自由！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Never surrender -->
+        <section id="never-surrender" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-flag quote-title-icon"></i>
+                    绝不投降 | Never surrender
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_01.mp3">We shall not flag or fail.</p>
+                        <p class="quote-chinese">我们绝不投降，也不会失败。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_02.mp3">We shall go on to the end.</p>
+                        <p class="quote-chinese">我们将战斗到底。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_03.mp3">We shall fight in France.</p>
+                        <p class="quote-chinese">我们将在法国作战。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_04.mp3">We shall fight on the seas and oceans.</p>
+                        <p class="quote-chinese">我们将在海洋中作战。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_05.mp3">We shall fight with growing confidence and growing strength in the air.</p>
+                        <p class="quote-chinese">我们将以越来越大的信心和越来越强的力量在空中作战。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_06.mp3">We shall defend our island, whatever the cost may be.</p>
+                        <p class="quote-chinese">我们将不惜一切代价保卫本土。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_07.mp3">We shall fight on the beaches.</p>
+                        <p class="quote-chinese">我们将在海滩作战。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_08.mp3">We shall fight on the landing grounds.</p>
+                        <p class="quote-chinese">我们将在敌人的登陆点作战。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_09.mp3">We shall fight in the fields and in the streets.</p>
+                        <p class="quote-chinese">我们将在田野和街头作战。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_10.mp3">We shall fight in the hills.</p>
+                        <p class="quote-chinese">我们将在山区作战。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_11.mp3">We shall never surrender.</p>
+                        <p class="quote-chinese">我们绝不投降。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Without victory, there is no survival -->
+        <section id="without-victory" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-medal quote-title-icon"></i>
+                    没有胜利，无法生存 | Without victory, there is no survival
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_01.mp3">I would say to the House, as I said to those who have joined this government: "I have nothing to offer but blood, toil, tears and sweat."</p>
+                        <p class="quote-chinese">正如我曾对参加本届政府的成员所说的那样，我要向下院说："我没什么可以奉献，有的只是热血、辛劳、眼泪和汗水。"</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_02.mp3">We have before us an ordeal of the most grievous kind.</p>
+                        <p class="quote-chinese">摆在我们面前的，是一场严峻的极为痛苦的考验。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_03.mp3">We have before us many, many long months of struggle and of suffering.</p>
+                        <p class="quote-chinese">在我们面前，有许多许多漫长的斗争和苦难的岁月。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_04.mp3">You ask, what is our policy?</p>
+                        <p class="quote-chinese">你们问：我们的政策是什么？</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_05.mp3">I will say: It is to wage war, by sea, land and air, with all our might, with all the strength that God has given us; to wage war against a monstrous tyranny, never surpassed in the dark, and lamentable catalogue of human crime.</p>
+                        <p class="quote-chinese">我要说，我们的政策就是用我们全部能力，用上帝所给予我们的全部力量，在海上、陆地和空中进行斗争，同一个在人类黑暗悲惨的罪恶史上从未有过的穷凶极恶的暴政进行斗争。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_06.mp3">That is our policy.</p>
+                        <p class="quote-chinese">这就是我们的政策。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_07.mp3">You ask, what is our aim?</p>
+                        <p class="quote-chinese">你们问：我们的目标是什么？</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_08.mp3">I can answer in one word: victory.</p>
+                        <p class="quote-chinese">我可以用一个词来回答：胜利。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_09.mp3">Victory at all costs, victory in spite of all terror, victory, however long and hard the road may be.</p>
+                        <p class="quote-chinese">不惜一切代价，去赢得胜利；无论多么可怕，也要赢得胜利，无论道路多么遥远和艰难，也要赢得胜利。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_10.mp3">For without victory, there is no survival.</p>
+                        <p class="quote-chinese">因为没有胜利，就没有生存。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. It takes a strong man to save himself, and a great man to save another -->
+        <section id="save-himself" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-hand-holding-heart quote-title-icon"></i>
+                    强者自救，圣者渡人 | It takes a strong man to save himself, and a great man to save another
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p12_01.mp3">These walls are funny.</p>
+                        <p class="quote-chinese">（监狱里的高墙）实在是很有趣。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p12_02.mp3">First you hate them, then you get used to them.</p>
+                        <p class="quote-chinese">刚入狱的时候你痛恨周围的高墙，慢慢地，你习惯了生活在其中；</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p12_03.mp3">Enough time passes，you depend on them. That's institutionalized.</p>
+                        <p class="quote-chinese">最终你会发现自己不得不依靠它而生存。这就是体制化。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p12_04.mp3">I guess it comes down to a simple choice: get busy living or get busy dying.</p>
+                        <p class="quote-chinese">生命可以归结为一种简单的选择：要么忙于生存，要么赶着去死。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p12_05.mp3">In 1966, Andy Dufresne escaped from Shawshank Prison.</p>
+                        <p class="quote-chinese">1966年，安迪.杜弗兰从肖申克监狱脱逃。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p12_06.mp3">All they found (of him) was a muddy set of prison clothes, a bar of soap, and an old rock-hammer damn near worn down to the nub.</p>
+                        <p class="quote-chinese">他们只发现了他的一套沾满泥浆的狱服，一条肥皂和一把磨得几乎只剩下把儿的石锤。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p12_07.mp3">I remember thinking it would take a man six hundred years to tunnel through the wall with it. Old Andy did it in less than twenty.</p>
+                        <p class="quote-chinese">我曾经想过一个人用这把锤头在墙上挖通隧道，需要花六百年，安迪用了不到二十年。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p12_08.mp3">It takes a strong man to save himself, and a great man to save another.</p>
+                        <p class="quote-chinese">强者自救，圣者渡人。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. Lay this brick perfectly -->
+        <section id="lay-this-brick" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-cubes quote-title-icon"></i>
+                    砌好这块砖 | Lay this brick perfectly
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_01.mp3">One summer his dad tore down a brick wall in the front of his business and told 12-year-old Will and his 9-year-old brother to rebuild it.</p>
+                        <p class="quote-chinese">一年夏天威尔的父亲推到了自家商店门前的一面墙，让12岁的威尔和他9岁的弟弟重建它。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_02.mp3">A job they said was impossible.</p>
+                        <p class="quote-chinese">他们认为这是一个不可完成的工作。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_03.mp3">It took them a year and a half ,but they did it.</p>
+                        <p class="quote-chinese">那花了他们一年半的时间，但是，他们做到了。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_04.mp3">And he said, "now don't you ever tell me there's something that you can't do."</p>
+                        <p class="quote-chinese">威尔的父亲说，"那么，永远不要跟我说有什么事你做不到"。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_05.mp3">You don't set out to build a wall.</p>
+                        <p class="quote-chinese">你不要想着去造一堵墙。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_06.mp3">You don't say, "I'm going to build the biggest, baddest, greatest wall that's ever been built."</p>
+                        <p class="quote-chinese">不要想着说，我要造世界上最大，最厉害，最宏伟壮观的墙。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_07.mp3">You don't start there.</p>
+                        <p class="quote-chinese">不要抱着这种态度开始。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_08.mp3">You say, "I'm going to lay this brick as perfectly as a brick can be laid."</p>
+                        <p class="quote-chinese">你要说，我要砌好这块砖，砌的尽可能完美无缺。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_09.mp3">You do that every single day.</p>
+                        <p class="quote-chinese">你每天都要这样去做。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_10.mp3">And soon you have a wall.</p>
+                        <p class="quote-chinese">很快，你就有了一堵墙。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14. Do what you need to do -->
+        <section id="do-what-you-need" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-tasks quote-title-icon"></i>
+                    做你需要做的事情 | Do what you need to do
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_01.mp3">I have a great time with my life, and I want to share it.</p>
+                        <p class="quote-chinese">我的生命中有美好的时光，我想要分享。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_02.mp3">I love living.</p>
+                        <p class="quote-chinese">我爱生活。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_03.mp3">I think that's infectious, it's something you can't fake.</p>
+                        <p class="quote-chinese">我认为那是有感染力的，那是无法伪装的。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_04.mp3">Greatness is not this wonderful, esoteric elusive god-like feature that only special people possess.</p>
+                        <p class="quote-chinese">伟大不是那么崇高辉煌、深奥难测、难以捉摸、上天钟爱的特质，不只是少数特别的人才具备。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_05.mp3">It's something that truly exists within all of us.</p>
+                        <p class="quote-chinese">这种东西其实潜藏在我们每一个人身上。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_06.mp3">It's very simple.</p>
+                        <p class="quote-chinese">它非常简单。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_07.mp3">This is what I believe, and I'm willing to die for it.</p>
+                        <p class="quote-chinese">这就是我的信念，我愿意用生命来证明这一点。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_08.mp3">Period.</p>
+                        <p class="quote-chinese">毫不迟疑。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_09.mp3">It's that simple.</p>
+                        <p class="quote-chinese">就是这么简单。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_10.mp3">I know who I am, I know what I believe, and that's all I need to know.</p>
+                        <p class="quote-chinese">我知道我是谁，我知道我的信念，那就是我需要知道的全部。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_11.mp3">From there, you do what you need to to.</p>
+                        <p class="quote-chinese">因此，你只要做你需要做的事情。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_12.mp3">You know.</p>
+                        <p class="quote-chinese">你知道。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_13.mp3">I think what happens is we make the situation more complex</p>
+                        <p class="quote-chinese">我认为实际发生的事，我们自己把事情弄复杂了。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 15. Sickening work ethic -->
+        <section id="sickening-work" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-briefcase quote-title-icon"></i>
+                    病态的职业精神 | Sickening work ethic
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_01.mp3">The separation of talent and skill is one of the greatest misunderstood concepts for people who are trying to excel, who have dreams, who want to do things.</p>
+                        <p class="quote-chinese">天赋和技能之间的差别是那些追求成功、追求梦想、想做事的人最容易误解的观念之一。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_02.mp3">Talent you have naturally.</p>
+                        <p class="quote-chinese">天赋是与生俱来的。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_03.mp3">Skill is only developed by hours and hours and hours of beating on your craft.</p>
+                        <p class="quote-chinese">技能只能通过成千上万小时锤炼而来。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_04.mp3">I've never really viewed myself as particularly talented.</p>
+                        <p class="quote-chinese">我从来不认为自己有特殊的天赋。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_05.mp3">And where I excel is ridiculous, sickening, work ethic.</p>
+                        <p class="quote-chinese">我擅长的是，荒唐的，病态的，职业精神。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_06.mp3">You know, while the other guy's sleeping? I'm working.</p>
+                        <p class="quote-chinese">你知道，当别人睡觉得时候，我在工作。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_07.mp3">While the other guy's eatin'? I'm working.</p>
+                        <p class="quote-chinese">当别人吃饭的时候，我在工作。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_08.mp3">There's no easy way around it.</p>
+                        <p class="quote-chinese">成功从来没有容易的路可走。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_09.mp3">No matter how talented you are, your talent is going to fail you if you're not skilled.</p>
+                        <p class="quote-chinese">不管你的天赋有多么出色，再好的天赋也会让你失败，如果你没有练出技能来。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_10.mp3">If you don't study, work really hard and dedicate yourself to getting better every single day.</p>
+                        <p class="quote-chinese">如果你没有非常用心的学习，工作，没有致力于让自己每天进步一点点。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_11.mp3">You'll never be able to communicate your artistry to people the way that you want.</p>
+                        <p class="quote-chinese">那你怎能让别人确信你能过自己想要的生活呢。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_12.mp3">The only thing that I see that is distinctly different about me is that I'm not afraid to die on a treadmill.</p>
+                        <p class="quote-chinese">我觉得我唯一不同的一点就是，我永远不怕在跑步机上坚持到底。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_13.mp3">You might have more talent than me, you might be smarter than me, but if we get on a treadmill together，there're two things.</p>
+                        <p class="quote-chinese">你可能天赋比我强，你也可能比我聪明，但是如果我们同时踏上跑步机，那只有两个结果。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_14.mp3">You're getting off first, or I'm gonna die.</p>
+                        <p class="quote-chinese">你会先下去，而我会跑到最后一刻。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_15.mp3">It's really that simple.</p>
+                        <p class="quote-chinese">就是这么简单。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 16. Think different -->
+        <section id="think-different" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-lightbulb quote-title-icon"></i>
+                    非同凡响 | Think different
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_01.mp3">Here's to the crazy ones.</p>
+                        <p class="quote-chinese">向那些疯狂的家伙致敬。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_02.mp3">The misfits.</p>
+                        <p class="quote-chinese">他们我行我素，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_03.mp3">The rebels.</p>
+                        <p class="quote-chinese">桀骜不驯，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_04.mp3">The troublemakers.</p>
+                        <p class="quote-chinese">惹是生非，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_05.mp3">The round pegs in the square holes.</p>
+                        <p class="quote-chinese">就像方孔中的圆桩，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_06.mp3">The ones who see things differently.</p>
+                        <p class="quote-chinese">他们用不同的角度来看待事物，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_07.mp3">They're not fond of rules.</p>
+                        <p class="quote-chinese">他们既不墨守成规，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_08.mp3">And they have no respect for the status quo.</p>
+                        <p class="quote-chinese">也不安于现状，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_09.mp3">You can quote them, disagree with them, glorify or vilify them.</p>
+                        <p class="quote-chinese">你尽可以引用他们，否定他们，质疑他们，颂扬抑或是诋毁他们，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_10.mp3">About the only thing you can't do is ignore them.</p>
+                        <p class="quote-chinese">但唯独不能漠视他们。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_11.mp3">Because they change things.</p>
+                        <p class="quote-chinese">因为他们改变了事物。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_12.mp3">They push the human race forward.</p>
+                        <p class="quote-chinese">他们让人类向前跨越了一大步。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_13.mp3">And while some may see them as the crazy ones, we see genius.</p>
+                        <p class="quote-chinese">他们是别人眼里的疯子，却是我们眼中的天才。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_14.mp3">Because the people who are crazy enough to think they can change the world, are the ones who do.</p>
+                        <p class="quote-chinese">因为，只有疯狂到认为，自己能够改变世界的人，才能真正的改变世界。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 17. I always knew I was going to be rich -->
+        <section id="always-knew" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-gem quote-title-icon"></i>
+                    我一直知道我会富有 | I always knew I was going to be rich
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p17_01.mp3">I always knew I was going to be rich.</p>
+                        <p class="quote-chinese">我一直知道我会富有。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p17_02.mp3">I don't think I ever doubted it for a minute.</p>
+                        <p class="quote-chinese">我一分钟都没怀疑过。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p17_03.mp3">Einstein is reputed to have said that "compound interest is the eighth wonder of the world". Or something like that.</p>
+                        <p class="quote-chinese">据说爱因斯坦曾说过，"复利是世界的第八大奇迹"，或者类似的话。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p17_04.mp3">And it goes back to that story, you probably learned when you were in grade school.</p>
+                        <p class="quote-chinese">这总会追溯到那个故事，你可能在学校里听说过的故事。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p17_05.mp3">Where somebody did something for the king.</p>
+                        <p class="quote-chinese">有人为国王做了一些事情，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p17_06.mp3">And the king said, "what can i do for you ?"</p>
+                        <p class="quote-chinese">国王说，我能为你做什么。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p17_07.mp3">And he said, "Well, lets take a chessboard, and put one kernel of wheat on the first square, and then double it on the second, and double it on the third."</p>
+                        <p class="quote-chinese">他说，"拿个棋盘，第一个格子里放一颗谷粒，第二个格子放两颗，第三个格子里再翻倍。"</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p17_08.mp3">And the king readily agreed to it, and by the time he figured out what two to the 64th amounted to, he was giving away the entire kingdom.</p>
+                        <p class="quote-chinese">那国王立即同意了，而当他算出从第2个格子到第64个格子里总共是多少时，他就已经把整个王国的粮食给出去了。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p17_09.mp3">So it's a pretty simple concept, but over time, it accomplishes extraordinary things.</p>
+                        <p class="quote-chinese">这是一个很简单的概念，但是随着时间的推移，就会有非凡的结果。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 18. Compound interest -->
+        <section id="compound-interest" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-chart-pie quote-title-icon"></i>
+                    复利法则 | Compound interest
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_01.mp3">And very early, probably when I was seven or so, I took this book out of the Bensen Library, called "A thousand ways to make a $ 1,000."</p>
+                        <p class="quote-chinese">很早的时候，大概7岁时，我从本森图书馆借出一本书，《赚一千美元的一千种方法》。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_02.mp3">And one of the ways in this book was having penny weighing machines.</p>
+                        <p class="quote-chinese">书中的方法之一，就是拥有一台投币体重计。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_03.mp3">I sat and calculated how much it would cost to buy the first weighing machine, and then how long it would take for the profit from that one to buy another one.</p>
+                        <p class="quote-chinese">我坐下算了算我要花多少钱去购买第一台体重计, 第一台体重计赚得的利润能购买另外一台需要花多长时间。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_04.mp3">And I would sit there and create these compound interest tables to figure out how long it would take me to have a weighing machine for every person in the world.</p>
+                        <p class="quote-chinese">我会坐在那里做复利表,去计算让世界上每个人都拥有一台体重秤需要多长时间。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_05.mp3">I had everybody in the country weighing themselves ten times a day, and me just sitting there like John D.Rockefeller of weighing machines.</p>
+                        <p class="quote-chinese">我要让所有美国人每天称十次体重，我只要坐在那里，像体重计行业的洛克菲勒。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_06.mp3">That allowance when I was a little boy was a nickel a week,</p>
+                        <p class="quote-chinese">我小时候每个星期的零花钱是一个星期五美分，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_07.mp3">But I liked the idea of having a little more than a nickel a week to work with.</p>
+                        <p class="quote-chinese">但我想让我一个星期的零花钱不止五美分，</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_08.mp3">And I went into business very early.</p>
+                        <p class="quote-chinese">我很早就进入商业领域了。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_09.mp3">I started sell Coca-Cola door to door.</p>
+                        <p class="quote-chinese">我挨家挨户卖可口可乐。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_10.mp3">I sold gum door to door.</p>
+                        <p class="quote-chinese">我挨家挨户卖口香糖。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_11.mp3">I sold "Saturday Evening Post", "Liberty" Magazine, "Ladies Home Journal", you name it.</p>
+                        <p class="quote-chinese">我卖《星期六晚报》，卖《自由杂志》，《妇女家庭杂志》，凡是你想到的。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_12.mp3">I think I enjoyed the game almost right from the start.</p>
+                        <p class="quote-chinese">我觉得我从一开始就很喜欢这项游戏。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_13.mp3">But I like being my own boss.</p>
+                        <p class="quote-chinese">但我喜欢做我自己的老板。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_14.mp3">That's one thing I liked about delivering papers.</p>
+                        <p class="quote-chinese">这是我喜欢投递报纸的原因之一。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_15.mp3">I could arrange the route I wanted.</p>
+                        <p class="quote-chinese">我可以安排我喜欢的路线。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_16.mp3">Nobody was bothering me at 5.00 or 6.00 in the morning.</p>
+                        <p class="quote-chinese">在早上五六点钟没人打扰我。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_17.mp3">I was delivering 500 papers a day.</p>
+                        <p class="quote-chinese">我一天投递500份报纸。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_18.mp3">And I made a penny a paper, but in terms of compounding, that penny has turned into something else.</p>
+                        <p class="quote-chinese">一份报纸赚一便士，但是通过复利法则，那一便士便换成了其他东西。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 19. Method of learning -->
+        <section id="method-of-learning" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-book quote-title-icon"></i>
+                    学习的方法 | Method of learning
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p19_01.mp3">Alfred North Whitehead said it one time that "the rapid advance of civilization came only when man invented the method of invention".</p>
+                        <p class="quote-chinese">阿尔弗雷德·诺斯·怀特海曾经说过一句很正确的话，他说只有当人类"发明了发明的方法"之后，人类社会才能快速地发展。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p19_02.mp3">And of course he was referring to the huge growth of GDP per capita and all the other good things that we now take for granted which started a few hundred years ago and before that all was stasis.</p>
+                        <p class="quote-chinese">他指的是人均GDP的巨大增长和其他许多我们今天已经习以为常的好东西。人类社会在几百年前才出现了大发展，在那之前，每个世纪的发展几乎等于零。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p19_03.mp3">So if civilization can progress only when it invents the method of invention, you can progress only when you learn the method of learning.</p>
+                        <p class="quote-chinese">人类社会只有发明了发明的方法之后才能发展，同样的道理，你们只有学习了学习的方法之后才能进步。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p19_04.mp3">I was very lucky.</p>
+                        <p class="quote-chinese">我非常幸运。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p19_05.mp3">I came to law school having learned the method of learning and nothing has served me better in my long life than continuous learning.</p>
+                        <p class="quote-chinese">我读法学院之前就已经学会了学习的方法。在我这漫长的一生中，没有什么比持续学习对我的帮助更大。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p19_06.mp3">And if you take Warren Buffett and watched him with a time clock, I would say half of all the time he spends is sitting on his ass and reading.</p>
+                        <p class="quote-chinese">再拿沃伦·巴菲特来说，如果你们拿着计时器观察他，会发现他醒着的时候有一半时间是在看书。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p19_07.mp3">And a big chunk of the rest of the time is spent talking one on one, either on the telephone or personally, with highly gifted people whom he trusts and who trust him.</p>
+                        <p class="quote-chinese">他把剩下的时间大部分用来跟一些非常有才干的人进行一对一的交谈，有时候是打电话，有时候是当面，那些都是他信任且信任他的人。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p19_08.mp3">In other words, it looks quite academic, all this worldly success.</p>
+                        <p class="quote-chinese">换句话说，沃伦在世俗生活中的巨大成功，是通过很学术的方法获得的。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 20. Change mindset change brain -->
+        <section id="change-mindset" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-brain quote-title-icon"></i>
+                    改变思维模式，改变大脑 | Change mindset change brain
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p20_01.mp3">Just the words 'yet' or 'not yet,' we're finding, give kids greater confidence, give them a path into the future that creates greater persistence.</p>
+                        <p class="quote-chinese">我们发现，注重过程的思维模式，会赋予孩子们更多自信，指引他们不断向前，越发坚持不懈。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p20_02.mp3">And we can actually change students' mindsets.</p>
+                        <p class="quote-chinese">事实上，我们能够改变学生的思维模式。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p20_03.mp3">In one study, we taught them that every time they push out of their comfort zone to learn something new and difficult, the neurons in their brain can form new, stronger connections, and over time they can get smarter.</p>
+                        <p class="quote-chinese">在一项研究中，我们告诉学生们，每当他们迫使自己走出舒适区，学习新知识，迎接新挑战，大脑中的神经元会形成新的更强的连接，他们会逐渐变得越来越聪明。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p20_04.mp3">Look what happened.</p>
+                        <p class="quote-chinese">看看后面发生了什么吧。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p20_05.mp3">In this study, students who were not taught this growth mindset continued to show declining grades over this difficult school transition, but those who were taught this lesson showed a sharp rebound in their grades.</p>
+                        <p class="quote-chinese">在这项研究中，没有接受成长型思维模式训练的学生，在这一困难的过渡阶段，成绩持续下滑，但那些受过该训练的学生，成绩强势反弹，卓有起色。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p20_06.mp3">We have shown this now, this kind of improvement, with thousands and thousands of kids, especially struggling students.</p>
+                        <p class="quote-chinese">如今，我们已证实这一结论，通过成千上万个孩子的实例，尤其是那些在学业上挣扎的孩子。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 21. Grit is the key to success -->
+        <section id="grit-is-key" class="quote-section">
+            <div class="card">
+                <h2 class="quote-title">
+                    <i class="fas fa-hiking quote-title-icon"></i>
+                    毅力是成功的关键 | Grit is the key to success
+                </h2>
+                <div class="quote-container">
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_01.mp3">So I left the classroom, and I went to graduate school to become a psychologist.</p>
+                        <p class="quote-chinese">所以我离开了讲台，回到研究院成为一名心理学家。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_02.mp3">I started studying kids and adults in all kinds of super challenging settings, and in every study my question was, who is successful here and why?</p>
+                        <p class="quote-chinese">我开始研究在各种非常具有挑战性的情况下的孩子和大人，在各项研究中，我的问题是：谁才是成功者，为什么他们会成功？</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_03.mp3">My research team and I went to West Point Military Academy.</p>
+                        <p class="quote-chinese">我和我的研究团队前往西点军校展开调研。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_04.mp3">We tried to predict which cadets would stay in military training and which would drop out.</p>
+                        <p class="quote-chinese">我们试图预测哪些学员能够耐得住军队的训练，哪些会被淘汰出局。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_05.mp3">We went to the National Spelling Bee and tried to predict which children would advance farthest in competition.</p>
+                        <p class="quote-chinese">我们前去观摩全国拼字比赛，同时也试着预测哪些孩子会晋级到最后的比赛。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_06.mp3">We studied rookie teachers working in really tough neighborhoods, asking which teachers are still going to be here in teaching by the end of the school year, and of those, who will be the most effective at improving learning outcomes for their students?</p>
+                        <p class="quote-chinese">我们研究在恶劣的工作环境下工作的，刚入行的老师，询问他们哪些老师决定会在学年结束后继续留下来任教，以及他们之中谁能最快地提高学生的学习成绩。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_07.mp3">We partnered with private companies, asking, which of these salespeople is going to keep their jobs?</p>
+                        <p class="quote-chinese">我们与私企合作，向他们询问哪些销售人员可以保住工作。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_08.mp3">And who's going to earn the most money?</p>
+                        <p class="quote-chinese">哪些人可以赚钱最多？</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_09.mp3">In all those very different contexts, one characteristic emerged as a significant predictor of success.</p>
+                        <p class="quote-chinese">在所有那些不同的情境下，一种性格特征凸显了出来，这种特征在很大程度上预示了成功。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_10.mp3">And it wasn't social intelligence.</p>
+                        <p class="quote-chinese">而且它并不是社交智力。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_11.mp3">It wasn't good looks, physical health, and it wasn't I.Q.</p>
+                        <p class="quote-chinese">不是漂亮的外表，强健的体魄，也不是很高的IQ。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_12.mp3">It was grit.</p>
+                        <p class="quote-chinese">它是毅力。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_13.mp3">Grit is passion and perseverance for very long-term goals.</p>
+                        <p class="quote-chinese">毅力是对长远目标的激情和坚持。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_14.mp3">Grit is having stamina.</p>
+                        <p class="quote-chinese">毅力是拥有持久的恒劲。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_15.mp3">Grit is sticking with your future, day in, day out, not just for the week, not just for the month, but for years, and working really hard to make that future a reality.</p>
+                        <p class="quote-chinese">毅力是你对未来的坚持，日复一日，而不仅仅是持续一个星期或者一个月，而是几年甚至几十年努力奋斗着让自己的梦想变为现实。</p>
+                    </div>
+                    <div class="quote-item">
+                        <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_16.mp3">Grit is living life like it's a marathon, not a sprint.</p>
+                        <p class="quote-chinese">毅力是把生活当成一场马拉松而不是一次短跑。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 经典英文演讲句集 | 制作者：Genspark AI |版权：核聚</p>
+        </div>
+    </footer>
+
+    <!-- 顶置悬浮目录 -->
+    <button class="floating-toc-btn" id="floatingTocBtn" type="button" aria-label="打开目录">
+        <i class="fas fa-list-ul"></i><span>目录</span>
+    </button>
+
+    <div class="toc-overlay" id="tocOverlay"></div>
+
+    <aside class="floating-toc-panel" id="floatingTocPanel" aria-hidden="true" aria-label="全文目录">
+        <div class="ftoc-header">
+            <span class="ftoc-heading"><i class="fas fa-list-ul"></i> 目录</span>
+            <button class="ftoc-close" id="ftocClose" type="button" aria-label="关闭目录">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="ftoc-list" id="ftocList"></ul>
+    </aside>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-toc" type="button" aria-label="返回顶部" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i><span class="back-to-toc-label">顶部</span>
+    </button>
+
+    <script>
+        // Theme Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.querySelector('.theme-toggle');
+            const body = document.body;
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Initialize theme based on system preference
+            if (prefersDarkScheme.matches) {
+                body.classList.add('theme-dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+
+            // 手机浏览器地址栏颜色跟随主题
+            function syncThemeColor() {
+                const meta = document.getElementById('metaThemeColor');
+                if (meta) {
+                    meta.setAttribute('content', body.classList.contains('theme-dark') ? '#121212' : '#ffffff');
+                }
+            }
+            syncThemeColor();
+
+            themeToggle.addEventListener('click', function() {
+                body.classList.toggle('theme-dark');
+
+                if (body.classList.contains('theme-dark')) {
+                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+                syncThemeColor();
+            });
+            
+            // Mobile Navigation Toggle
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            mobileNavToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                
+                if (navMenu.classList.contains('active')) {
+                    mobileNavToggle.innerHTML = '<i class="fas fa-times"></i>';
+                } else {
+                    mobileNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // ===== 语音朗读：优先播放预生成的真人级 MP3（每次点击只播放一遍），缺失时回退浏览器 TTS =====
+        let cachedVoices = [];
+        let currentAudio = null;
+        let activeBtn = null;
+        let activeEl = null;
+        let playToken = 0;        // 播放令牌：每次新播放自增，旧回调凭令牌失效
+        let fallbackUsed = false; // 保证一次播放最多回退一次，杜绝重复朗读
+
+        function refreshVoices() {
+            if ('speechSynthesis' in window) {
+                cachedVoices = window.speechSynthesis.getVoices() || [];
+            }
+        }
+
+        if ('speechSynthesis' in window) {
+            refreshVoices();
+            window.speechSynthesis.onvoiceschanged = refreshVoices;
+            // Edge 的在线神经语音是异步返回的，需要多次轮询才能拿到
+            [300, 1000, 2500].forEach(function (delay) {
+                window.setTimeout(refreshVoices, delay);
+            });
+        }
+
+        // 兜底选音优先级：在线神经语音 > 现代 en-US > 老式 David/Zira（最后手段）
+        function pickEnglishVoice() {
+            if (!cachedVoices.length) refreshVoices();
+            const en = cachedVoices.filter(function (v) { return /^en[-_]/i.test(v.lang); });
+            const neural = en.find(function (v) { return /(natural|neural|online)/i.test(v.name); });
+            if (neural) return neural;
+            const modern = en.find(function (v) {
+                return /^en[-_]US/i.test(v.lang) && !/(david|zira|mark|hazel|george|susan|richard)/i.test(v.name);
+            });
+            if (modern) return modern;
+            return en[0] || null;
+        }
+
+        function clearPlayState() {
+            if (activeBtn) activeBtn.classList.remove('playing');
+            if (activeEl) activeEl.classList.remove('is-playing');
+            activeBtn = null;
+            activeEl = null;
+        }
+
+        function markPlaying(btn, el) {
+            clearPlayState();
+            activeBtn = btn || null;
+            activeEl = el || null;
+            if (btn) btn.classList.add('playing');
+            if (el) el.classList.add('is-playing');
+        }
+
+        // 立即停止上一次播放（MP3 音频 + 浏览器 TTS），并使旧回调失效
+        function stopPlayback() {
+            playToken++;
+            fallbackUsed = false;
+            if (currentAudio) {
+                currentAudio.onended = null;
+                currentAudio.onerror = null;
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentAudio = null;
+            }
+            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        }
+
+        // 兜底朗读把长句按标点切成片段，段间自然停顿，长片段放慢
+        function splitForSpeech(text) {
+            const raw = String(text).trim();
+            if (raw.length <= 110) return [raw];
+            const pieces = [];
+            let start = 0;
+            for (let i = 0; i < raw.length; i++) {
+                if (',;:'.indexOf(raw[i]) >= 0 && i - start > 40) {
+                    pieces.push(raw.slice(start, i + 1).trim());
+                    start = i + 1;
+                }
+            }
+            pieces.push(raw.slice(start).trim());
+            return pieces;
+        }
+
+        function fallbackSpeak(text, btn, el, token) {
+            if (token !== playToken || fallbackUsed) return; // 已被新一次播放取代，或本次已回退过
+            if (!('speechSynthesis' in window)) {
+                clearPlayState();
+                return;
+            }
+            fallbackUsed = true;
+            const synth = window.speechSynthesis;
+            synth.cancel();
+            const chunks = splitForSpeech(text);
+            chunks.forEach(function (chunk, i) {
+                const u = new SpeechSynthesisUtterance(chunk);
+                u.lang = 'en-US';
+                u.rate = chunk.length > 90 ? 0.85 : 0.92;
+                u.pitch = 1;
+                const voice = pickEnglishVoice();
+                if (voice) u.voice = voice;
+                if (i === chunks.length - 1) {
+                    u.onend = function () { if (token === playToken) clearPlayState(); };
+                }
+                synth.speak(u);
+            });
+        }
+
+        function speakText(text, audioSrc, btn, el) {
+            stopPlayback();               // 先停掉上一次，保证任何时刻只有一段声音
+            const token = playToken;      // 当前令牌即本次播放
+            markPlaying(btn, el);
+            if (audioSrc) {
+                try {
+                    const audio = new Audio();
+                    audio.loop = false;   // 明确只播放一次，不循环
+                    audio.preload = 'auto';
+                    audio.src = audioSrc;
+                    currentAudio = audio;
+                    audio.onended = function () { if (token === playToken) clearPlayState(); };
+                    audio.onerror = function () { fallbackSpeak(text, btn, el, token); };
+                    const promise = audio.play();
+                    if (promise && typeof promise.catch === 'function') {
+                        promise.catch(function () { fallbackSpeak(text, btn, el, token); });
+                    }
+                    return;
+                } catch (err) {
+                    fallbackSpeak(text, btn, el, token);
+                    return;
+                }
+            }
+            fallbackSpeak(text, btn, el, token);
+        }
+
+        // ===== 中文折叠：点英文=朗读+展开，再点=收起 =====
+        (function initQuoteCollapse() {
+            document.querySelectorAll('.quote-item').forEach(function (item) {
+                const en = item.querySelector('.quote-english');
+                const zh = item.querySelector('.quote-chinese');
+                if (!en || !zh) return;
+
+                const sentence = en.textContent.trim();
+                en.removeAttribute('onclick');
+                en.setAttribute('title', '点击播放发音并展开中文，再次点击收起中文');
+
+                const speakBtn = document.createElement('button');
+                speakBtn.type = 'button';
+                speakBtn.className = 'speak-btn';
+                speakBtn.setAttribute('aria-label', '只播放这句的发音');
+                speakBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+                speakBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    speakText(sentence, en.dataset.audio, speakBtn, en);
+                });
+                en.appendChild(speakBtn);
+
+                const hint = document.createElement('span');
+                hint.className = 'zh-hint';
+                hint.textContent = '中文翻译（点击展开）';
+                item.appendChild(hint);
+
+                item.classList.add('is-collapsed');
+
+                item.addEventListener('click', function (e) {
+                    if (e.target.closest('.speak-btn')) return;
+                    if (item.classList.contains('is-collapsed')) {
+                        item.classList.remove('is-collapsed');
+                        speakText(sentence, en.dataset.audio, null, en);
+                    } else {
+                        item.classList.add('is-collapsed');
+                    }
+                });
+            });
+        })();
+
+        // ===== 顶置悬浮目录 =====
+        (function initFloatingToc() {
+            const openBtn = document.getElementById('floatingTocBtn');
+            const panel = document.getElementById('floatingTocPanel');
+            const overlay = document.getElementById('tocOverlay');
+            const closeBtn = document.getElementById('ftocClose');
+            const listEl = document.getElementById('ftocList');
+            if (!openBtn || !panel || !listEl) return;
+
+            function openPanel() {
+                panel.classList.add('open');
+                overlay.classList.add('open');
+                panel.setAttribute('aria-hidden', 'false');
+            }
+
+            function closePanel() {
+                panel.classList.remove('open');
+                overlay.classList.remove('open');
+                panel.setAttribute('aria-hidden', 'true');
+            }
+
+            openBtn.addEventListener('click', function () {
+                if (panel.classList.contains('open')) { closePanel(); } else { openPanel(); }
+            });
+            closeBtn.addEventListener('click', closePanel);
+            overlay.addEventListener('click', closePanel);
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closePanel();
+            });
+
+            const linkMap = new Map();
+            document.querySelectorAll('.toc-list .toc-link').forEach(function (source, index) {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.className = 'ftoc-link';
+                a.href = source.getAttribute('href');
+
+                const num = document.createElement('span');
+                num.className = 'ftoc-index';
+                num.textContent = String(index + 1).padStart(2, '0');
+
+                const label = document.createElement('span');
+                label.textContent = source.textContent.trim();
+
+                a.appendChild(num);
+                a.appendChild(label);
+                a.addEventListener('click', closePanel);
+
+                li.appendChild(a);
+                listEl.appendChild(li);
+                linkMap.set((source.getAttribute('href') || '').slice(1), a);
+            });
+
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        linkMap.forEach(function (a) { a.classList.remove('active'); });
+                        const current = linkMap.get(entry.target.id);
+                        if (current) current.classList.add('active');
+                    });
+                }, { rootMargin: '-84px 0px -68% 0px', threshold: 0 });
+
+                document.querySelectorAll('section.quote-section[id]').forEach(function (s) {
+                    observer.observe(s);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
