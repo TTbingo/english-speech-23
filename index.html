@@ -363,6 +363,75 @@
             margin-right: 0.5rem;
         }
 
+        /* ===== 背景简介（默认折叠） ===== */
+        .bg-note {
+            margin: -0.75rem 0 1.4rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background-color: var(--bg-secondary);
+            overflow: hidden;
+        }
+
+        .bg-note > summary {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.6rem 0.9rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.02em;
+            color: var(--text-secondary);
+            cursor: pointer;
+            list-style: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .bg-note > summary::-webkit-details-marker { display: none; }
+
+        .bg-note > summary:hover {
+            color: var(--text-primary);
+            background-color: var(--bg-accent);
+        }
+
+        .bg-note-chevron {
+            margin-left: auto;
+            font-size: 0.72rem;
+            transition: transform 0.25s ease;
+        }
+
+        .bg-note[open] .bg-note-chevron {
+            transform: rotate(180deg);
+        }
+
+        .bg-note-body {
+            border-top: 1px solid var(--border-color);
+            padding: 0.7rem 0.9rem 0.85rem;
+            font-size: 0.86rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+        }
+
+        .bg-note-body p {
+            margin: 0 0 0.5rem;
+        }
+
+        .bg-note-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bg-note-body strong {
+            display: inline-block;
+            margin-right: 0.4rem;
+            padding: 0.05rem 0.4rem;
+            border-radius: 4px;
+            background-color: var(--bg-accent);
+            color: var(--text-accent);
+            font-size: 0.78rem;
+            font-weight: 600;
+            vertical-align: 0.05em;
+        }
+
         /* ===== 顶置悬浮目录 ===== */
         .floating-toc-btn {
             position: fixed;
@@ -766,6 +835,21 @@
                 font-size: 0.8rem;
             }
 
+            .bg-note {
+                margin: -0.6rem 0 1.1rem;
+            }
+
+            .bg-note > summary {
+                padding: 0.62rem 0.8rem;
+                font-size: 0.82rem;
+            }
+
+            .bg-note-body {
+                padding: 0.65rem 0.8rem 0.8rem;
+                font-size: 0.84rem;
+                line-height: 1.7;
+            }
+
             .quote-item {
                 padding: 0.85rem 0.95rem 0.85rem 1rem;
             }
@@ -944,6 +1028,13 @@
                     <i class="fas fa-trophy quote-title-icon"></i>
                     必须达成目标 | Reach the goals
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>沃尔玛创始人 山姆·沃尔顿（Sam Walton，1918—1992）</p>
+                        <p><strong>背景</strong>1950 年他在阿肯色州本顿维尔开出第一家小店，1992 年去世时沃尔玛已是全球最大的零售企业。这段话是他谈自己一生的取舍：把几乎所有时间押在目标上，靠“每天改进一点”的复利往前挪。核聚英语课程对这段的标注也是他。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p01_01.mp3">My life has been a trade-off.</p>
@@ -976,6 +1067,13 @@
                     <i class="fas fa-star quote-title-icon"></i>
                     成为举足轻重的人 | Mean something
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>威尔·史密斯（Will Smith，1968— ）</p>
+                        <p><strong>背景</strong>美国演员、歌手，费城出身，从《新鲜王子妙事多》一路到奥斯卡影帝。这段话是他对“人生要留下什么”的表述，被广泛当作他的座右铭：不是要更大的名声，而是让世界因为自己来过而更好一点。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p02_01.mp3">I want to do good.</p>
@@ -1020,6 +1118,13 @@
                     <i class="fas fa-shield-alt quote-title-icon"></i>
                     捍卫你的梦想 | Protect your dream
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>电影《当幸福来敲门》（The Pursuit of Happyness，2006）</p>
+                        <p><strong>背景</strong>威尔·史密斯饰演的克里斯·加德纳对儿子说的台词。影片改编自真人真事：1980 年代的旧金山，一位无家可归的推销员带着儿子睡过地铁站厕所，最终成为股票经纪人。原型是父亲对儿子的告诫——别让任何人告诉你做不到。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p03_01.mp3">Don't ever let someone tell you that you can't do something.</p>
@@ -1056,6 +1161,13 @@
                     <i class="fas fa-paint-brush quote-title-icon"></i>
                     优秀者模仿，伟大者剽窃 | Good artists copy, great artists steal
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>史蒂夫·乔布斯（Steve Jobs），1994 年访谈</p>
+                        <p><strong>背景</strong>出自硅谷历史协会为 PBS 纪录片《Triumph of the Nerds》所做的访谈。他借毕加索那句“好的艺术家抄袭，伟大的艺术家窃取”说明“品味”怎么来：只有大量接触人类最好的作品，才分辨得出什么是对的。后来他常以此解释苹果为何“借鉴”施乐 PARC 的图形界面。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p04_01.mp3">How do you know what's the right direction?</p>
@@ -1096,6 +1208,13 @@
                     <i class="fas fa-chart-line quote-title-icon"></i>
                     一次一次又一次的失败 | Failed over and over and over again
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>迈克尔·乔丹（Michael Jordan），Nike 1997 年广告《Failure》</p>
+                        <p><strong>背景</strong>那些数字都是真的：职业生涯投失 9000 多球、输掉近 300 场、26 次投失关键球。他把失败次数当成成功的分母，这段念白后来成了体育史上最著名的“失败宣言”。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p05_01.mp3">I've missed more than 9000 shots in my career.</p>
@@ -1128,6 +1247,13 @@
                     <i class="fas fa-fire quote-title-icon"></i>
                     穿越痛苦 | Pushing through the pain
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>美国魔术师 大卫·布莱恩（David Blaine）的演讲自述</p>
+                        <p><strong>背景</strong>他以街头近景魔术与极限表演闻名——水下屏息 17 分 4 秒、冰中困守 61 小时、悬挂 60 小时。这段是他演讲的收尾：所谓魔法，不过是练习、训练、反复试验，然后忍着疼把自己推到医生认为不可能的位置。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p06_01.mp3">As a magician, I try to create images that make people stop and think.</p>
@@ -1168,6 +1294,13 @@
                     <i class="fas fa-mountain quote-title-icon"></i>
                     残酷世界 | Nasty place
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>电影《洛奇 6：永远的拳王》（Rocky Balboa，2006）</p>
+                        <p><strong>背景</strong>史泰龙自编自演，50 多岁的过气拳王回到费城，儿子却在成长中变得怨天尤人。这段台词讲的是“世界不会因为你委屈就善待你”——你先成了什么，世界才把你当什么。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p07_01.mp3">Then the time come for you to be your own man and take on the world and you did.</p>
@@ -1216,6 +1349,13 @@
                     <i class="fas fa-fist-raised quote-title-icon"></i>
                     承受打击 | Hit
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>电影《洛奇 6：永远的拳王》（Rocky Balboa，2006）续段</p>
+                        <p><strong>背景</strong>紧接着上一段：重要的不是你打得多重，而是你能挨多重的打还继续往前走。这段在国内被引用得极多，几乎成了“抗打击”的标准表述。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p08_01.mp3">You, me or nobody is gonna hit as hard as life.</p>
@@ -1264,6 +1404,13 @@
                     <i class="fas fa-sword quote-title-icon"></i>
                     你会战斗吗 | Will you fight?
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>电影《勇敢的心》（Braveheart，1995）</p>
+                        <p><strong>背景</strong>梅尔·吉布森自导自演，威廉·华莱士在斯特灵战役前对苏格兰军团的战前动员。影片背景是 13 世纪苏格兰抗英（史实中的斯特灵桥战役发生在 1297 年），这场演说也是影史上最著名的演讲场景之一。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p09_01.mp3">I am William Wallace.</p>
@@ -1328,6 +1475,13 @@
                     <i class="fas fa-flag quote-title-icon"></i>
                     绝不投降 | Never surrender
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>温斯顿·丘吉尔，1940 年 6 月 4 日下议院演说</p>
+                        <p><strong>背景</strong>题为《我们将在海滩上战斗》。当天敦刻尔克大撤退刚刚结束，33.8 万人撤回英国，全岛都在等一句“投降还是继续”。丘吉尔用一连串“我们将在……”把撤退讲成了决不投降的宣言。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p10_01.mp3">We shall not flag or fail.</p>
@@ -1384,6 +1538,13 @@
                     <i class="fas fa-medal quote-title-icon"></i>
                     没有胜利，无法生存 | Without victory, there is no survival
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>温斯顿·丘吉尔，1940 年 5 月 13 日下议院首次演说</p>
+                        <p><strong>背景</strong>题为《热血、辛劳、眼泪和汗水》。他三天前刚接替张伯伦组阁，德军已入侵比利时与卢森堡。那句“我没有别的，只有热血、辛劳、眼泪和汗水奉献给大家”自此成为政治演讲的模板。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p11_01.mp3">I would say to the House, as I said to those who have joined this government: "I have nothing to offer but blood, toil, tears and sweat."</p>
@@ -1436,6 +1597,13 @@
                     <i class="fas fa-hand-holding-heart quote-title-icon"></i>
                     强者自救，圣者渡人 | It takes a strong man to save himself, and a great man to save another
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>电影《肖申克的救赎》（The Shawshank Redemption，1994）</p>
+                        <p><strong>背景</strong>瑞德（摩根·弗里曼）的旁白，改编自斯蒂芬·金的小说。这段是瑞德解释监狱高墙如何驯服一个人——先恨它，再习惯它，最后离不开它，也就是“体制化”这个说法最著名的出处。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p12_01.mp3">These walls are funny.</p>
@@ -1480,6 +1648,13 @@
                     <i class="fas fa-cubes quote-title-icon"></i>
                     砌好这块砖 | Lay this brick perfectly
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>威尔·史密斯讲述父亲让他和弟弟砌墙的亲身经历</p>
+                        <p><strong>背景</strong>父亲拆掉费城店铺前的一堵墙，让 12 岁的他和 9 岁的弟弟重新砌起来，两个小孩花了一年半才完工。他由此得出自己的方法论：别想着造一堵墙，先把这一块砖砌到最完美。故事后来也写进了他 2021 年的回忆录《Will》。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p13_01.mp3">One summer his dad tore down a brick wall in the front of his business and told 12-year-old Will and his 9-year-old brother to rebuild it.</p>
@@ -1532,6 +1707,13 @@
                     <i class="fas fa-tasks quote-title-icon"></i>
                     做你需要做的事情 | Do what you need to do
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>威尔·史密斯（Will Smith）</p>
+                        <p><strong>背景</strong>他把“伟大”从神坛上拉了下来：伟大不是少数人才能尝到的那种神秘、神圣的东西，而是每个人身上都真实存在的。想清楚自己是谁、相信什么，剩下的就是去做你该做的事。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p14_01.mp3">I have a great time with my life, and I want to share it.</p>
@@ -1596,6 +1778,13 @@
                     <i class="fas fa-briefcase quote-title-icon"></i>
                     病态的职业精神 | Sickening work ethic
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>威尔·史密斯（Will Smith）</p>
+                        <p><strong>背景</strong>他把天赋（talent）和技能（skill）分得很开：天赋是天生给的，技能只能靠一小时一小时地打磨换来。他形容自己那套近乎病态的工作伦理时，用的词正是 sickening work ethic。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p15_01.mp3">The separation of talent and skill is one of the greatest misunderstood concepts for people who are trying to excel, who have dreams, who want to do things.</p>
@@ -1668,6 +1857,13 @@
                     <i class="fas fa-lightbulb quote-title-icon"></i>
                     非同凡响 | Think different
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>苹果 1997 年“Think Different”品牌广告</p>
+                        <p><strong>背景</strong>TBWA\Chiat\Day 创作，理查德·德莱弗斯配音。乔布斯回归苹果后推出，画面是爱因斯坦、毕加索、马丁·路德·金等十余位“疯子”的黑白影像，文案落点是：只有疯狂到以为自己能改变世界的人，才能真正改变世界。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p16_01.mp3">Here's to the crazy ones.</p>
@@ -1736,6 +1932,13 @@
                     <i class="fas fa-gem quote-title-icon"></i>
                     我一直知道我会富有 | I always knew I was going to be rich
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>沃伦·巴菲特（Warren Buffett，1930— ）</p>
+                        <p><strong>背景</strong>他 11 岁买下第一只股票，13 岁报税申报自行车收入。这句“我从没怀疑过一分钟”是他谈复利与时间时反复出现的自述——财富是结果，不是目标。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p17_01.mp3">I always knew I was going to be rich.</p>
@@ -1784,6 +1987,13 @@
                     <i class="fas fa-chart-pie quote-title-icon"></i>
                     复利法则 | Compound interest
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>沃伦·巴菲特谈童年读的那本《一千种赚 1000 美元的方法》</p>
+                        <p><strong>背景</strong>7 岁他从图书馆借到这本书，书里靠体重秤赚钱的路子让他第一次算清了“投入—回收—滚动”这笔账。他常把复利称作世界第八大奇迹（这句话多被归到爱因斯坦名下，实际来源并不可靠）。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p18_01.mp3">And very early, probably when I was seven or so, I took this book out of the Bensen Library, called "A thousand ways to make a $ 1,000."</p>
@@ -1868,6 +2078,13 @@
                     <i class="fas fa-book quote-title-icon"></i>
                     学习的方法 | Method of learning
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>查理·芒格，2007 年南加州大学法学院毕业典礼演讲</p>
+                        <p><strong>背景</strong>他引用怀特海“人类发明了发明的方法之后，文明才快速进步”，再给出个人版本：你只有学会了学习的方法才能进步。他自称这辈子最幸运的事，是在进法学院之前就掌握了这套方法。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p19_01.mp3">Alfred North Whitehead said it one time that "the rapid advance of civilization came only when man invented the method of invention".</p>
@@ -1912,6 +2129,13 @@
                     <i class="fas fa-brain quote-title-icon"></i>
                     改变思维模式，改变大脑 | Change mindset change brain
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>卡罗尔·德韦克（Carol Dweck），TED 演讲《相信你能进步的力量》（2014）</p>
+                        <p><strong>背景</strong>斯坦福心理学家、“成长型思维”（growth mindset）的提出者。她发现只要把“yet（还）”加进“我不会”里，孩子就从“失败者”变回“还在路上的人”；她的团队还测到了大脑在纠错时活跃度的真实变化。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p20_01.mp3">Just the words 'yet' or 'not yet,' we're finding, give kids greater confidence, give them a path into the future that creates greater persistence.</p>
@@ -1948,6 +2172,13 @@
                     <i class="fas fa-hiking quote-title-icon"></i>
                     毅力是成功的关键 | Grit is the key to success
                 </h2>
+                <details class="bg-note">
+                    <summary><i class="fas fa-circle-info"></i>背景简介<span class="bg-note-chevron"><i class="fas fa-chevron-down"></i></span></summary>
+                    <div class="bg-note-body">
+                        <p><strong>出处</strong>安杰拉·达克沃斯（Angela Duckworth），TED 演讲《毅力：激情与坚持的力量》（2013）</p>
+                        <p><strong>背景</strong>她离开咨询公司去纽约公立学校教数学，发现 IQ 预测不了成绩，于是转去读心理学。西点军校的淘汰率、全国拼字比赛、芝加哥公立学校的追踪研究，最后都指向同一个特征——grit。</p>
+                    </div>
+                </details>
                 <div class="quote-container">
                     <div class="quote-item">
                         <p class="quote-english" onclick="speakText(this.textContent)" data-audio="audio/p21_01.mp3">So I left the classroom, and I went to graduate school to become a psychologist.</p>
